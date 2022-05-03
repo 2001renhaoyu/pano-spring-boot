@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.example.panospringboot.panoplayer.mapper")
+@MapperScan("com.example.mapper")
 public class PanoSpringBootApplication {
 
     public static void main(String[] args) {
