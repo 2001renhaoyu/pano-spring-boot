@@ -1,4 +1,4 @@
-package com.example.panospringboot;
+package com.example;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
@@ -36,7 +36,7 @@ public class GeneratorCodeConfig {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("郝欣然");
+        gc.setAuthor("郝星然");
         gc.setOpen(false);
         //实体属性 Swagger2 注解
         gc.setSwagger2(false);
@@ -44,16 +44,16 @@ public class GeneratorCodeConfig {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/PanoDatabase");
+        dsc.setUrl("jdbc:mysql://localhost:3307/dc");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("ren20010728");
+        dsc.setPassword("12345");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.example.panospringboot");
-        pc.setEntity("model");
+        pc.setParent("com.example");
+        pc.setEntity("entity");
         pc.setMapper("mapper");
         pc.setService("service");
         pc.setServiceImpl("service.impl");
