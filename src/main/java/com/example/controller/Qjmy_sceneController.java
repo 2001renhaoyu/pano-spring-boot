@@ -2,8 +2,12 @@ package com.example.controller;
 
 
 import com.example.entity.*;
+import com.example.json.Pic;
 import com.example.json.Scene_json;
 import com.example.mapper.*;
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.Results;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -43,6 +47,8 @@ public class Qjmy_sceneController {
 
     @Autowired
     private Qjmy_auto_guideMapper qjmyAutoGuideMapper;
+    private com.example.json.Pic Pic;
+
 
     @RequestMapping("/scene")
     public Scene_json getjson(){
@@ -78,6 +84,19 @@ public class Qjmy_sceneController {
 
         return scene_json;
     }
+
+    @RequestMapping("/getpic")
+    public Pic getPic(){
+        Pic pic=new Pic();
+        List<Qjmy_scene> scenes=qjmySceneMapper.selectList(null);
+        for (Qjmy_scene qjmy_scene:scenes){
+            Pic.pic=qjmy_scene.getId_res_urls();
+        }
+        
+        return Pic;
+
+    }
+
 
 
 }
