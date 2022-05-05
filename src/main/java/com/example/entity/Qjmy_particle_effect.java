@@ -22,7 +22,7 @@ public class Qjmy_particle_effect implements Serializable {
 
     private Integer num;
 
-    private Integer range;
+    private Integer prange;
 
     private String color;
 
@@ -61,12 +61,12 @@ public class Qjmy_particle_effect implements Serializable {
         this.num = num;
     }
 
-    public Integer getRange() {
-        return range;
+    public Integer getPrange() {
+        return prange;
     }
 
-    public void setRange(Integer range) {
-        this.range = range;
+    public void setPrange(Integer prange) {
+        this.prange = prange;
     }
 
     public String getColor() {
@@ -92,7 +92,7 @@ public class Qjmy_particle_effect implements Serializable {
         ", id_scene=" + id_scene +
         ", url=" + url +
         ", num=" + num +
-        ", range=" + range +
+        ", prange=" + prange +
         ", color=" + color +
         ", size_attenuation=" + size_attenuation +
         "}";

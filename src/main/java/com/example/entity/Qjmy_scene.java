@@ -20,11 +20,11 @@ public class Qjmy_scene implements Serializable {
 
     private Float auto_rotate_speed;
 
-    private Integer enable_auto_rotate;
+    private Boolean enable_auto_rotate;
 
     private Float volume;
 
-    private Integer muted;
+    private Boolean muted;
 
     private Integer id_res_urls;
 
@@ -55,11 +55,11 @@ public class Qjmy_scene implements Serializable {
         this.auto_rotate_speed = auto_rotate_speed;
     }
 
-    public Integer getEnable_auto_rotate() {
+    public Boolean getEnable_auto_rotate() {
         return enable_auto_rotate;
     }
 
-    public void setEnable_auto_rotate(Integer enable_auto_rotate) {
+    public void setEnable_auto_rotate(Boolean enable_auto_rotate) {
         this.enable_auto_rotate = enable_auto_rotate;
     }
 
@@ -71,11 +71,11 @@ public class Qjmy_scene implements Serializable {
         this.volume = volume;
     }
 
-    public Integer getMuted() {
+    public Boolean getMuted() {
         return muted;
     }
 
-    public void setMuted(Integer muted) {
+    public void setMuted(Boolean muted) {
         this.muted = muted;
     }
 
